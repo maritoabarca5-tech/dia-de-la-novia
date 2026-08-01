@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import MOCK_TRACKS from './tracks.json';
+import portadaImg from '../public/PORTADA.png';
 
 function App() {
   const [currentTrack, setCurrentTrack] = useState(MOCK_TRACKS[0]);
@@ -220,7 +221,7 @@ function App() {
           </div>
           <div className="user-profile">
             <div className="profile-pic">
-              <img src={`${import.meta.env.BASE_URL}PORTADA.png`} alt="Profile" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+              <img src={portadaImg} alt="Profile" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
             </div>
             <span>Tú y yo</span>
           </div>
@@ -228,7 +229,7 @@ function App() {
 
         <section className="playlist-header">
           <div className="playlist-cover glass-panel">
-            <img src={`${import.meta.env.BASE_URL}PORTADA.png`} alt="Cover" className="cover-img" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+            <img src={portadaImg} alt="Cover" className="cover-img" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
             <i className="fa-solid fa-image placeholder-icon" style={{display: 'none'}}></i>
           </div>
           <div className="playlist-info">
