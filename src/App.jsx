@@ -396,7 +396,7 @@ function App() {
         </div>
         <audio 
           ref={audioRef} 
-          src={currentTrack.src} 
+          src={`${import.meta.env.BASE_URL}${currentTrack.src.replace(/^\//, '')}`} 
           onEnded={nextTrack}
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
